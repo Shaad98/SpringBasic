@@ -15,9 +15,7 @@
     <value>15</value>
    </constructor-arg>
    <constructor-arg>
-    <value>
-        20
-    </value>
+    <value>20</value>
    </constructor-arg>
   </bean>
 </beans>

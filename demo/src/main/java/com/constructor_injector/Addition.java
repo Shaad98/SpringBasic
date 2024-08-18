@@ -15,6 +15,12 @@ public class Addition {
         this.b=b;
         System.out.println("Constructor parameter data type are : {int,int}");
     }
+    Addition(String a,String b)
+    {
+        this.a = Integer.parseInt(a);
+        this.b = Integer.parseInt(b);
+        System.out.println("Constructor parameter data type are : {String,String}");
+    }
     public String toString()
     {
         return "The values are [a = "+this.a+" b = "+this.b+" ] ";
