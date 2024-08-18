@@ -36,6 +36,7 @@
             </set>
         </property>
         <property name="courses">
+            <!-- You cannot write key as tag -->
             <map>
                 <entry key="C">
                     <value>2</value>
