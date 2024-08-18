@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/p
+                           http://www.springframework.org/schema/p/spring-p.xsd
+                           http://www.springframework.org/schema/c
+                           http://www.springframework.org/schema/c/spring-c.xsd">
+
+    <!-- If no collection properties in class  -->
+     <!-- P Schema  -->
+    <!-- <bean class="com.practice.Employee" p:name="Shanks"/> -->
+
+   <bean class="com.practice.Employee" name="emp1">
+       <property name="name" value="Manoj"/>
+       <!-- If single element in list then -->
+        <!-- <property name="phoneNo">
+            <value>223344</value>
+        </property> -->
+        <property name="phoneNo">
+            <list>
+                <value>997755</value>
+                <value>443322</value>
+                <null/>
+                <value>114422</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Delhi</value>
+                <value>Panjab</value>
+                <value>Kerla</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="C">
+                    <value>2</value>
+                </entry>
+                <entry key="Java" value="4"/>
+            </map>
+        </property>
+   </bean>
+
+</beans>
