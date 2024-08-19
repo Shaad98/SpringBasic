@@ -1,9 +1,11 @@
 package com.autowiring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Example {
-    
+    @Autowired
+    @Qualifier("object")
     private X x;
 
     public X getX() {
@@ -16,7 +18,7 @@ public class Example {
 
     public Example() {
     }
-    @Autowired
+    
     public Example(X x) {
         this.x = x;
     }
