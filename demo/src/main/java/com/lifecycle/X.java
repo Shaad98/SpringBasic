@@ -17,7 +17,7 @@ public class X {
     public X(int a) {
         this.a = a;
     }
-    public void init()
+    public void alive()
     {
         System.out.println("We are inside init method......");
     }
@@ -27,7 +27,7 @@ public class X {
         return "X [a=" + a + "]";
     }
 
-    public void destroy()
+    public void dead()
     {
         System.out.println("We are inside destroy method...");
     }

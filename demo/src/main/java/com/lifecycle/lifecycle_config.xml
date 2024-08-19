@@ -10,6 +10,6 @@
                            http://www.springframework.org/schema/c
                            http://www.springframework.org/schema/c/spring-c.xsd">
 
-    <bean class="com.lifecycle.X" name="xbean" p:a="25" init-method="init" destroy-method="destroy" />
+    <bean class="com.lifecycle.X" name="xbean" p:a="25" init-method="alive" destroy-method="dead" />
 
 </beans>
