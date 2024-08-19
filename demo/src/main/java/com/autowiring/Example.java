@@ -3,13 +3,13 @@ package com.autowiring;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Example {
-    @Autowired
+    
     private X x;
 
     public X getX() {
         return x;
     }
-
+    @Autowired
     public void setX(X x) {
         this.x = x;
     }
