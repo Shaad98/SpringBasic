@@ -18,6 +18,6 @@
    <bean class="com.autowiring.X" name="object">
     <property name="a" value="70"/>
     </bean>
-   <bean class="com.autowiring.Example" name="exam"  />
+   <bean class="com.autowiring.Example" name="exam" autowire="byType" />
 
 </beans>

@@ -1,11 +1,11 @@
 package com.autowiring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Example {
-    @Autowired
-    @Qualifier("object")
+    // @Autowired
+    // @Qualifier("object")
     private X x;
 
     public X getX() {
