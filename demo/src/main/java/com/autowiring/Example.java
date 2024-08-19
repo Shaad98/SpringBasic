@@ -9,14 +9,14 @@ public class Example {
     public X getX() {
         return x;
     }
-    @Autowired
+    
     public void setX(X x) {
         this.x = x;
     }
 
     public Example() {
     }
-
+    @Autowired
     public Example(X x) {
         this.x = x;
     }
