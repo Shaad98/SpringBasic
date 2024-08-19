@@ -1,9 +1,12 @@
 package com.lifecycle;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-public class X implements InitializingBean,DisposableBean {
+// import org.springframework.beans.factory.DisposableBean;
+// import org.springframework.beans.factory.InitializingBean;
+
+public class X  {
     private int a;
 
     public int getA() {
@@ -20,32 +23,35 @@ public class X implements InitializingBean,DisposableBean {
     public X(int a) {
         this.a = a;
     }
-    public void alive()
+    @PostConstruct
+    public void start()
     {
         System.out.println("We are inside init method......");
     }
     
-    @Override
-    public String toString() {
-        return "X [a=" + a + "]";
-    }
-
-    public void dead()
+  
+   @PreDestroy
+    public void end()
     {
         System.out.println("We are inside destroy method...");
     }
 
     @Override
-    public void destroy() throws Exception {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'destroy'");
-        System.out.println("We are calling destroy by Interface name DisposableBean");
+    public String toString() {
+        return "X [a=" + a + "]";
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'afterPropertiesSet'");
-        System.out.println("We are calling init by Interface name InitializingBean");
-    }
+    // @Override
+    // public void destroy() throws Exception {
+    //     // TODO Auto-generated method stub
+    //     // throw new UnsupportedOperationException("Unimplemented method 'destroy'");
+    //     System.out.println("We are calling destroy by Interface name DisposableBean");
+    // }
+
+    // @Override
+    // public void afterPropertiesSet() throws Exception {
+    //     // TODO Auto-generated method stub
+    //     // throw new UnsupportedOperationException("Unimplemented method 'afterPropertiesSet'");
+    //     System.out.println("We are calling init by Interface name InitializingBean");
+    // }
 }
